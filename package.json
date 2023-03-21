@@ -10,7 +10,7 @@
     "format-check": "prettier --check '**/*.ts'",
     "lint": "eslint src/**/*.ts",
     "package": "ncc build --source-map --license licenses.txt",
-    "test": "tsc --noEmit && jest",
+    "test": "tsc --noEmit && jest --passWithNoTests",
     "all": "pnpm run build && pnpm run format && pnpm run lint && pnpm run package && pnpm test"
   },
   "repository": {
@@ -25,7 +25,11 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.10.0"
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "js-base64": "^3.7.5",
+    "markdown-table": "^3.0.3",
+    "semver": "^7.3.8"
   },
   "devDependencies": {
     "@amazeelabs/eslint-config": "^1.4.42",
@@ -33,6 +37,7 @@
     "@amazeelabs/prettier-config": "^1.1.2",
     "@jest/globals": "^29.5.0",
     "@types/node": "^18.15.5",
+    "@types/semver": "^7.3.13",
     "@typescript-eslint/parser": "^5.56.0",
     "@vercel/ncc": "^0.36.1",
     "eslint": "^8.36.0",
