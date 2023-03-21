@@ -11,6 +11,7 @@
     "lint": "eslint src/**/*.ts",
     "package": "ncc build --source-map --license licenses.txt",
     "test": "tsc --noEmit && jest --passWithNoTests",
+    "test:update": "jest --passWithNoTests --updateSnapshot",
     "all": "pnpm run build && pnpm run format && pnpm run lint && pnpm run package && pnpm test"
   },
   "repository": {
@@ -29,6 +30,7 @@
     "@actions/github": "^5.1.1",
     "js-base64": "^3.7.5",
     "markdown-table": "^3.0.3",
+    "read-yaml-file": "^2.1.0",
     "semver": "^7.3.8"
   },
   "devDependencies": {
